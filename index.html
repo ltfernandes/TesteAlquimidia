@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+	<!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Hello World!</title>
+</head>
+<body class="bg-light">
+	<div class="container">
+		<div class="row justify-content-center text-center py-5">
+			<div class="col-md-12 col-lg-10">
+				<img class="d-block mx-auto mb-4" src="img/logo-alquimidia.svg" alt="" width="220">
+			</div>
+		</div>
+		<div class="row justify-content-center text-left">
+			<div class="col-md-12 col-lg-10">
+				
+				<h2>Novo cliente</h2>
+				<p class="lead">Nesta tela poderá ser criado um novo cadastro de clientes. Campos marcados com * são de preenchimento obrigatório.</p>
+				<hr>
+			</div>
+		</div>
+		
+		<div class="row justify-content-center">
+			<div class="col-md-12 col-lg-10 p-4 ">
+				<form id="formCriaCliente">
+					<h4 class="mb-3">Informações pessoais</h4>
+					<div class="row">
+						<div class="col-12 mb-3">
+							<label for="nome">Nome completo *</label>
+							<input type="text" class="form-control" id="nome" placeholder="Nome Completo" required>
+						</div>
+						<div class="col-md-6 mb-3">
+							<label for="rg">RG *</label>
+							<input type="text" class="form-control" id="rg" placeholder="00.000.000-0" required>
+						</div>
+						<div class="col-md-6 mb-3">
+							<label for="cpf">CPF *</label>
+							<input type="text" class="form-control" id="cpf" placeholder="000.000.000-00" required>
+						</div>
+						<div class="col-md-6 mb-3">
+							<label for="telefone">Telefone *</label>
+							<input type="text" class="form-control" id="telefone" placeholder="(00) 00000-0000" required>
+						</div>
+						<div class="col-md-6 mb-3">
+							<label for="email">Email *</label>
+							<input type="email" class="form-control" id="email" placeholder="seu@email.com" required>
+						</div>
+					</div>
+					
+					<h4 class="mb-3 mt-5">Endereço</h4>
+					<div class="row">
+						<div class="col-12 mb-3">
+							<label for="cep">CEP *</label>
+							<input type="text" class="form-control" id="cep" placeholder="00000-000" maxlength="9" required>
+						</div>
+						<div class="col-12 mb-3">
+							<label for="pais">Pais *</label>
+							<select class="custom-select d-block w-100" id="pais" required>
+								<option value="Brasil">Brasil</option>
+								<option value="Argentina">Argentina</option>
+								<option value="Uruguai">Uruguai</option>
+								<option value="Paraguai">Paraguai</option>
+							</select>
+						</div>
+						<div class="col-md-4 mb-3">
+							<label for="estado">Estado *</label>
+							<select class="custom-select d-block w-100" id="estado" required>
+								<option value="">Selecione a opção</option>
+								<option value="AC">AC</option>
+								<option value="AL">AL</option>
+								<option value="AM">AM</option>
+								<option value="AP">AP</option>
+								<option value="BA">BA</option>
+								<option value="CE">CE</option>
+								<option value="DF">DF</option>
+								<option value="ES">ES</option>
+								<option value="GO">GO</option>
+								<option value="MA">MA</option>
+								<option value="MG">MG</option>
+								<option value="MS">MS</option>
+								<option value="MT">MT</option>
+								<option value="PA">PA</option>
+								<option value="PB">PB</option>
+								<option value="PE">PE</option>
+								<option value="PI">PI</option>
+								<option value="PR">PR</option>
+								<option value="RJ">RJ</option>
+								<option value="RN">RN</option>
+								<option value="RO">RO</option>
+								<option value="RR">RR</option>
+								<option value="RS">RS</option>
+								<option value="SC">SC</option>
+								<option value="SE">SE</option>
+								<option value="SP">SP</option>
+								<option value="TO">TO</option>
+							</select>
+						</div>
+						<div class="col-md-8 mb-3">
+							<label for="cidade">Cidade *</label>
+							<input type="text" class="form-control" id="cidade" placeholder="Cidade" required>
+						</div>
+						<div class="col-md-5 mb-3">
+							<label for="bairro">Bairro *</label>
+							<input type="text" class="form-control" id="bairro" placeholder="Bairro" required>
+						</div>
+						<div class="col-md-5 mb-3">
+							<label for="rua">Rua *</label>
+							<input type="text" class="form-control" id="rua" placeholder="Rua " required>
+						</div>
+						<div class="col-md-2 mb-3">
+							<label for="numero">Numero *</label>
+							<input type="text" class="form-control" id="numero" placeholder="000" required>
+						</div>
+						<div class="col-12 mb-3">
+							<label for="complemento">Complemento</label>
+							<input type="text" class="form-control" id="complemento" placeholder="Apartamento, bloco, etc">
+						</div>
+					</div>
+					<hr class="mb-4">
+					<button class="btn btn-primary btn-lg btn-block" type="submit" id="criaCliente">Cria novo cliente</button>
+				</form>
+			</div>
+		</div>
+		
+		<footer class="my-5 pt-5 text-muted text-center text-small">
+			<p class="mb-1">© 2017-2019 Company Name</p>
+			<ul class="list-inline">
+				<li class="list-inline-item"><a href="#">Privacy</a></li>
+				<li class="list-inline-item"><a href="#">Terms</a></li>
+				<li class="list-inline-item"><a href="#">Support</a></li>
+			</ul>
+		</footer>
+	</div>
+	
+	<!-- You can also require other files to run in this process -->
+	<script src="./js/renderer.js"></script>
+	
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"> </script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
